@@ -1,6 +1,9 @@
+using EcommerceApplication.Data;
+using EcommerceApplication.Data.Services.ActorService;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -23,6 +26,8 @@ namespace EcommerceApplication
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<AppDbContext>(options => options.UseSqlServer(Configuration.GetConnectionString("DefaultConnectionstring")));
+            services.AddScoped<IActorService,ActorServicecs>();
             services.AddControllersWithViews();
         }
 
@@ -52,6 +57,8 @@ namespace EcommerceApplication
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
             });
+            //Seed Database
+            AppDbInitializer.Seed(app);
         }
     }
 }
