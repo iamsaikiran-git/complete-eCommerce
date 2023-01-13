@@ -142,7 +142,7 @@ namespace EcommerceApplication.Data
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(10),
                             CinemaId = 3,
-                            ProducerId = 13,
+                            ProducerId = 3,
                             MovieCategory = MovieCategory.Documentary
                         },
                         new Movie()
@@ -154,7 +154,7 @@ namespace EcommerceApplication.Data
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(3),
                             CinemaId = 1,
-                            ProducerId = 11,
+                            ProducerId = 1,
                             MovieCategory = MovieCategory.Action
                         },
                         new Movie()
@@ -166,7 +166,7 @@ namespace EcommerceApplication.Data
                             StartDate = DateTime.Now,
                             EndDate = DateTime.Now.AddDays(7),
                             CinemaId = 4,
-                            ProducerId = 14,
+                            ProducerId = 4,
                             MovieCategory = MovieCategory.Horror
                         },
                         new Movie()
@@ -178,7 +178,7 @@ namespace EcommerceApplication.Data
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-5),
                             CinemaId = 1,
-                            ProducerId = 12,
+                            ProducerId = 2,
                             MovieCategory = MovieCategory.Documentary
                         },
                         new Movie()
@@ -190,7 +190,7 @@ namespace EcommerceApplication.Data
                             StartDate = DateTime.Now.AddDays(-10),
                             EndDate = DateTime.Now.AddDays(-2),
                             CinemaId = 1,
-                            ProducerId = 13,
+                            ProducerId = 3,
                             MovieCategory = MovieCategory.Cartoon
                         },
                         new Movie()
@@ -202,7 +202,7 @@ namespace EcommerceApplication.Data
                             StartDate = DateTime.Now.AddDays(3),
                             EndDate = DateTime.Now.AddDays(20),
                             CinemaId = 1,
-                            ProducerId = 15,
+                            ProducerId = 5,
                             MovieCategory = MovieCategory.Drama
                         }
                     });
